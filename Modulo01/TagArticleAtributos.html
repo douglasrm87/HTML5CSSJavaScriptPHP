@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de part e slot</title>
+    <style>
+        header.titulo {
+            color: white;   /* texto branco */
+            background-color: #3300d9; /* azul */
+            padding: 20px;  /* espaçamento interno */
+            font-size: 1.5em;   /* tamanho da fonte */
+        }
+        section.conteudo {
+            color: #ffffff; /* texto branco */
+            background-color: #2ECC40; /* fundo verde */
+            padding: 15px;  /* espaçamento interno */
+        }
+        article {
+            border: 5px solid #d9007b;  /* borda rosa */
+            padding: 20px; /* espaçamento interno */
+            background-color: #f0f0f0; /* fundo cinza claro */
+            font-family: Arial, sans-serif; /* fonte padrão */
+            font-size: 1.2em; /* tamanho da fonte */
+            line-height: 1.6; /* altura da linha */
+            border-radius: 8px; /* borda arredondada */
+            max-width: 700px; /* largura máxima do artigo */
+            margin: 40px auto; /* centraliza o artigo na página */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+            overflow: hidden; /* evita que o conteúdo transborde */
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header class="titulo">
+            <h1 translate="no">Bem-vindo ao Exemplo de part e slot</h1>
+            <p translate="yes">Este texto pode ser traduzido automaticamente.</p>
+        </header>
+        <section class="conteudo">
+            <p>
+                Esta página demonstra o uso dos atributos <strong>part</strong> e <strong>slot</strong> em HTML, com as cores azul e verde.
+            </p>
+            <div>
+                <span slot="info">Informação adicional usando slot.</span>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
+
+
