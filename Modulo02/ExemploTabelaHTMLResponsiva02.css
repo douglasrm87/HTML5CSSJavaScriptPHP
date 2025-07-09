@@ -1,0 +1,85 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+}
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+th, td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #0078d7;
+    color: #fff;
+}
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Responsividade: transformar linhas em blocos para telas pequenas 
+Essa linha faz parte de uma regra CSS chamada media query. Ela serve para aplicar estilos específicos quando a largura da tela (viewport) for de no máximo 600 pixels, ou seja, em dispositivos com telas pequenas como celulares.
+
+Explicação detalhada:
+
+@media é uma diretiva CSS usada para definir condições sob as quais certos estilos devem ser aplicados.
+(max-width: 600px) é a condição: os estilos dentro desse bloco só serão aplicados se a largura da tela for menor ou igual a 600 pixels.
+Exemplo de uso:
+
+Resumo:
+Essa linha permite criar um design responsivo, adaptando a aparência do site para telas menores, melhorando a experiência em dispositivos móveis.
+
+*/
+@media (max-width: 600px) { 
+    .table-responsive {
+        padding: 0; /* Remove padding for smaller screens */
+    }
+    table, thead, tbody, th, td, tr {
+        /*Define o elemento como um bloco, fazendo com que ocupe toda a largura disponível e inicie em uma nova linha. */
+        display: block;      
+        width: 100%;  /* Faz a tabela ocupar toda a largura disponível */  
+    }
+    thead {
+        display: none;      /* Esconde o cabeçalho da tabela em telas pequenas */
+    }
+    tr {
+        margin-bottom: 16px;    /* Espaçamento entre as linhas */     
+        background: #fff;   /* Define o fundo branco para cada linha */ 
+        border-radius: 6px;     /* Arredonda os cantos de cada linha */
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);         /* Adiciona uma leve sombra para destacar as linhas */
+        padding: 8px 0;         /* Adiciona espaçamento interno vertical para as linhas */
+    }
+    td {
+        border: none;       /* Remove as bordas das células em telas pequenas */
+        border-bottom: 1px solid #eee;  /* Adiciona uma borda inferior leve para separar as células */
+        position: relative; /* Permite posicionar o pseudo-elemento :before */
+        padding-left: 50%;  /* Espaçamento à esquerda para o pseudo-elemento */
+        min-height: 40px;   /* Define uma altura mínima para as células */
+    }
+    td:before {
+        position: absolute; /* Permite posicionar o pseudo-elemento em relação à célula */
+        left: 16px;         /* Alinha o pseudo-elemento à esquerda */
+        top: 12px;  /* Alinha o pseudo-elemento verticalmente */
+        width: 45%; /* Define a largura do pseudo-elemento */
+        white-space: nowrap;    /* Impede que o texto do pseudo-elemento quebre em várias linhas */
+        font-weight: bold;  /* Deixa o texto do pseudo-elemento em negrito */
+        color: #0078d7; /* Define a cor do texto do pseudo-elemento */
+        content: attr(data-label);  /* Usa o atributo data-label do td como conteúdo do pseudo-elemento */
+    }
+    td:last-child {
+        border-bottom: none;    /* Remove a borda inferior da última célula */ 
+    }
+}

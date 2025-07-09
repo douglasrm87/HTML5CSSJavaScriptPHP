@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 16px;
+    background: #f9f9f9;
+}
+.table-container {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 8px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+}
+caption {
+    caption-side: top;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+th {
+    background: #e3e8f0;
+}
+tfoot td {
+    font-weight: bold;
+    background: #f1f5fa;
+}
+@media (max-width: 600px) {
+    th, td {
+        padding: 6px 4px;
+        font-size: 0.95em;
+    }
+    caption {
+        font-size: 1em;
+    }
+}
