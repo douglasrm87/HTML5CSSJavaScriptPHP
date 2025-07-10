@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Moderno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./TelaLogin.css">
+</head>
+<script src="TelaLogin.js"></script>
+<body>
+    <form class="login-container"
+        onsubmit="event.preventDefault();   /*  Evita o envio do formulário direto. Antes de disparar o submit permite chamar a funcao JS de validacao primeiro. */
+            validarLogin(
+                document.getElementById('usuario').value, 
+                document.getElementById('senha').value
+            );">
+        <h2>Login</h2>
+        <p>Por favor, insira suas credenciais para acessar o sistema.</p>
+        <div >
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required style="width: 100%;">
+        </div>
+        <div >
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required style="width: 100%;">
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>

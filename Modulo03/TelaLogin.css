@@ -1,0 +1,86 @@
+body {
+    /* Define um fundo gradiente linear para a página de login */
+    background: linear-gradient(120deg, #2980b9, #6dd5fa);  
+    height: 100vh;  /* Define a altura da página para ocupar toda a altura da janela de visualização */ 
+    margin: 0;  /* Remove a margem padrão do corpo */  
+    display: flex;      /* Usa flexbox para centralizar o conteúdo */
+    align-items: center;    /* Centraliza o conteúdo verticalmente */    
+    justify-content: center;        /* Centraliza o conteúdo vertical e horizontalmente */
+    font-family: 'Segoe UI', Arial, sans-serif;     /* Define a fonte padrão para o corpo */
+}
+.login-container {
+    background: #fff;   /* Define o fundo branco para o contêiner de login */
+    padding: 2.5rem 2rem;   /* Adiciona preenchimento ao contêiner de login */
+    border-radius: 12px;    /* Arredonda os cantos do contêiner de login */
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);   /* Adiciona uma sombra ao contêiner de login */
+    width: 100%;    /* Define a largura do contêiner de login para 100% */
+    max-width: 350px;   /* Define a largura máxima do contêiner de login para 350px */
+    display: flex;   /* Usa flexbox para organizar os elementos dentro do contêiner de login */
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    gap: 1.2rem;    /* Adiciona um espaço entre os elementos dentro do contêiner de login */
+}
+.login-container h2 {
+    text-align: center; /* Centraliza o título dentro do contêiner de login */
+    margin-bottom: 1rem;        /* Adiciona uma margem inferior ao título */
+    font-size: 1.8rem; /* Define o tamanho da fonte do título */
+    font-weight: 600; /* Define o peso da fonte do título */
+    color: #3ab929; /* Define a cor do título */
+    text-transform: uppercase; /* Transforma o texto do título em maiúsculas */
+    letter-spacing: 1px;    /* Adiciona um espaçamento entre as letras do título */
+}
+.login-container p {
+    text-align: center; /* Centraliza o parágrafo dentro do contêiner de login */
+    font-size: 0.9rem; /* Define o tamanho da fonte do parágrafo */
+    font-weight: 400; /* Define o peso da fonte do parágrafo */
+    margin-top: 0; /* Remove a margem superior do parágrafo */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior ao parágrafo */
+    color: #3d13f7; /* Define a cor do parágrafo */
+    margin-bottom: 1rem;    /* Adiciona uma margem inferior ao parágrafo */
+    letter-spacing: 1px;    /* Adiciona um espaçamento entre as letras do parágrafo */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Define a fonte do parágrafo */
+}
+.login-container input {
+    padding: 0.8rem;    /* Define o preenchimento interno dos campos de entrada */
+    width: 100%;    /* Define a largura dos campos de entrada para 100% */
+    box-sizing: border-box; /* Inclui o preenchimento e a borda na largura total dos campos de entrada */
+    background: #f5f6fa; /* Define o fundo dos campos de entrada */
+    color: #2c3e50; /* Define a cor do texto dos campos de entrada */
+    border: 1px solid #b2bec3;  /* Define a borda dos campos de entrada */
+    border-radius: 6px; /* Arredonda os cantos dos campos de entrada */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Define a fonte dos campos de entrada */
+    font-weight: 400; /* Define o peso da fonte dos campos de entrada */
+    font-size: 1rem;    /* Define o tamanho da fonte dos campos de entrada */
+    outline: none;      /* Remove o contorno padrão dos campos de entrada */
+    transition: border 0.2s;    /* Adiciona uma transição suave para a borda dos campos de entrada */      
+    margin-bottom: 4px; /* Adiciona uma margem inferior aos campos de entrada */
+}
+.login-container input:focus {
+    border-color: #2980b9;  /* Muda a cor da borda dos campos de entrada quando estão em foco */
+    display: flex;  /* Usa flexbox para organizar os elementos dentro do contêiner de login */
+    flex-direction: column;     /* Organiza os elementos em uma coluna */
+    align-items: flex-start;    /* Alinha os elementos à esquerda dentro do contêiner de login */
+    margin-bottom: 16px;    /* Adiciona uma margem inferior aos campos de entrada */
+}
+.login-container button {
+    padding: 0.8rem; /* Changed from 1rem to 0.8rem for better fit */
+    background: #2980b9;    /* Changed from #3498db to #2980b9 for a darker shade */
+    color: #fff;    /* Changed from #ecf0f1 to #fff for better contrast */
+    border: none;   /* Changed from 1px solid #2980b9 to none for a cleaner look */
+    border-radius: 6px;   /* Changed from 8px to 6px for a more subtle border radius */
+    font-size: 1rem;        /* Changed from 1.2rem to 1rem for consistency */
+    cursor: pointer;            /* Changed from default to pointer for better UX */
+    transition: background 0.2s;    /* Changed from all to background for performance */
+    width: 100%;     /* Changed from 100% to 60% for a more compact button */
+    align-self: center;   /* Changed from center to align-self for better alignment */
+    margin-top: 1rem;   /* Added margin-top for spacing */          
+}
+.login-container button:hover {
+    /* Altera a cor de fundo do botão ao passar o mouse */
+    background: #25a66a; 
+}
+.error-message {
+    color: #e74c3c; /* Define a cor da mensagem de erro */
+    text-align: center; /* Centraliza a mensagem de erro */
+    font-size: 0.95rem; /* Define o tamanho da fonte da mensagem de erro */
+    display: none;  /* Oculta a mensagem de erro por padrão */
+}
