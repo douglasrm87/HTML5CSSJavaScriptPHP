@@ -8,6 +8,7 @@ function validarLogin(usuario, senha) {
     const senhaValida = "123456";
     if (usuario === usuarioValido && senha === senhaValida) {
         alert('Login realizado com sucesso!');
+        window.location.href = "TelaAreaDoCliente.html";
         return true;
     } else {
         alert('Usuário ou senha incorretos.');

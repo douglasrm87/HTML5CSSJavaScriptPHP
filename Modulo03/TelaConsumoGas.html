@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro e Acompanhamento de Consumo de Gás</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f4; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; background: #fff; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background: #e0e0e0; }
+        input[type="number"] { width: 80px; }
+        .btn { padding: 8px 16px; margin-top: 10px; }
+        .total { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Registro e Acompanhamento da Leitura do Gás (12 Meses)</h1>
+    <form id="gasForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Leitura (m³)</th>
+                    <th>Consumo (m³)</th>
+                </tr>
+            </thead>
+            <tbody id="gasTableBody">
+                <!-- Linhas geradas por JS -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="total">Consumo Total (m³):</td>
+                    <td id="totalConsumo" class="total">0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button type="button" class="btn" onclick="calcularConsumo()">Calcular Consumo</button>
+    </form>
+
+    <script>
+        const meses = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ];
+
+        // Gera as linhas da tabela
+        const tbody = document.getElementById('gasTableBody');
+        for (let i = 0; i < 12; i++) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${meses[i]}</td>
+                <td><input type="number" min="0" step="0.01" id="leitura${i}" onchange="calcularConsumo()"></td>
+                <td id="consumo${i}">-</td>
+            `;
+            tbody.appendChild(tr);
+        }
+
+        function calcularConsumo() {
+            let total = 0;
+            let prev = null;
+            for (let i = 0; i < 12; i++) {
+                const leitura = parseFloat(document.getElementById(`leitura${i}`).value);
+                let consumo = '-';
+                if (!isNaN(leitura)) {
+                    if (prev !== null) {
+                        consumo = (leitura - prev).toFixed(2);
+                        if (consumo < 0) consumo = 'Erro';
+                        else total += parseFloat(consumo);
+                    }
+                    prev = leitura;
+                } else {
+                    prev = null;
+                }
+                document.getElementById(`consumo${i}`).textContent = consumo;
+            }
+            document.getElementById('totalConsumo').textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

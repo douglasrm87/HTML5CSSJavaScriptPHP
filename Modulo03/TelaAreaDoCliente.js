@@ -4,7 +4,7 @@ const subitems = {
     1: {
         title: "Dados de consumo",
         items: [
-            "Leitura do Gás",
+            `<a href="TelaConsumoGas.html">Leitura do Gás</a>`,
             "Leitura da água e acompanhamento de consumo"
         ]
     },
