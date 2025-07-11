@@ -1,0 +1,53 @@
+<!--
+Navegação Estruturada: 
+
+O Layout "Sidebar" é o Termo Chave
+O termo utilizado para descrever a criação de uma página HTML5 com um menu principal vertical no lado esquerdo, onde os detalhes do conteúdo são exibidos na área central ao clicar, é comumente conhecido como Layout de Sidebar ou Navegação em Barra Lateral. Outras variações frequentes incluem Menu Lateral Fixo e Layout de Duas Colunas com Barra Lateral Fixa.
+
+Essencialmente, este padrão de design de interface de usuário divide a tela em duas seções principais:
+
+A Barra Lateral (Sidebar): Localizada à esquerda (ou, menos comumente, à direita), contém o menu de navegação principal. Este menu é apresentado verticalmente e pode ser fixo, permanecendo visível mesmo quando o usuário rola a página, ou pode rolar junto com o conteúdo.
+
+A Área de Conteúdo Principal: Ocupa o restante do espaço da página e é onde o conteúdo detalhado, correspondente à opção selecionada no menu lateral, é carregado e exibido dinamicamente.
+
+Este tipo de layout é amplamente adotado em painéis administrativos, dashboards, aplicações web e sites que possuem uma estrutura de navegação mais complexa, oferecendo uma experiência de usuário clara e organizada.
+
+Implementação com HTML5 e CSS
+Para criar essa estrutura, os desenvolvedores utilizam principalmente HTML5 para a semântica e CSS para o estilo e posicionamento.
+
+HTML5: A estrutura básica é definida com tags semânticas. A tag <nav> é ideal para agrupar os links de navegação na barra lateral, enquanto a tag <main> é usada para o conteúdo principal. Essas seções são frequentemente envolvidas por um container <div> para facilitar o controle do layout.
+
+CSS: As Folhas de Estilo em Cascata são a ferramenta fundamental para posicionar os elementos. Propriedades como display: flex (Flexbox) ou display: grid (Grid Layout) no container principal são as abordagens modernas e mais eficientes para criar as duas colunas. A barra lateral recebe uma largura definida, e a área de conteúdo principal ocupa o espaço restante. Para manter a barra lateral fixa durante a rolagem, a propriedade position: fixed; é aplicada a ela.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Cliente - Sidebar Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="TelaAreaDoCliente.css">
+</head>
+<script src="TelaAreaDoCliente.js"></script>
+<body>
+    <div class="container">
+        <nav class="sidebar" aria-label="Menu principal">
+            <ul>
+                <li><button id="menu1" onclick="showSubitems(1)">1 - Dados de consumo</button></li>
+                
+                <li><button id="menu2" onclick="showSubitems(2)">2 - Interação entre moradores</button></li>
+                <li><button id="menu3" onclick="showSubitems(3)">Reserva de espaços</button></li>
+                <li><button id="menu4" onclick="showSubitems(4)">Mudança</button></li>
+                <li><button id="menu5" onclick="showSubitems(5)">Livro de ocorrências</button></li>
+                <li><button id="menu6" onclick="showSubitems(6)">Portaria</button></li>
+                <li><button id="menu7" onclick="showSubitems(7)">Para o morador</button></li>
+                <li><button id="menu8" onclick="showSubitems(8)">Avisos  e informações</button></li>
+            </ul>
+        </nav>
+        <main class="content" id="mainContent">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Imagem moderna" class="modern-image">
+        </main>
+    </div>
+</body>
+</html>

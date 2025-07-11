@@ -1,0 +1,116 @@
+ 
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #2196f3 0%, #43e97b 50%, #ffe53b 100%);
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+nav.sidebar {
+    width: 260px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.07);
+    padding: 32px 0 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+nav.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav.sidebar li {
+    margin: 0;
+}
+nav.sidebar button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 16px 32px;
+    font-size: 1.1em;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+nav.sidebar button.active, nav.sidebar button:hover {
+    background: linear-gradient(90deg, #2196f3 0%, #43e97b 100%);
+    color: #fff;
+}
+main.content {
+    margin-left: 260px;
+    padding: 48px 40px;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.modern-image {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    display: block;
+    margin: 0 auto;
+}
+.subitems-list {
+    background: rgba(255,255,255,0.92);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 36px;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.13em;
+    color: #222;
+}
+.subitems-list h2 {
+    margin-top: 0;
+    color: #2196f3;
+    font-size: 1.3em;
+    margin-bottom: 18px;
+}
+.subitems-list ul {
+    padding-left: 20px;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    nav.sidebar {
+        width: 100vw;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        box-shadow: none;
+        padding: 0;
+    }
+    nav.sidebar ul {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+    nav.sidebar li {
+        flex: 1;
+    }
+    nav.sidebar button {
+        padding: 14px 10px;
+        font-size: 1em;
+    }
+    main.content {
+        margin-left: 0;
+        padding: 24px 6vw;
+    }
+}
+    
