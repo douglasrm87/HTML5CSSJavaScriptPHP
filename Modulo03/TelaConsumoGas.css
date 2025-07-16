@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f4; }
+h1 { color: #333; }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+th { background: #e0e0e0; }
+input[type="number"] { width: 80px; }
+.btn { padding: 8px 16px; margin-top: 10px; }
+.total { font-weight: bold; }
+.total-value { color: #d9534f; }
+.error { color: red; }
+.success { color: green; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }

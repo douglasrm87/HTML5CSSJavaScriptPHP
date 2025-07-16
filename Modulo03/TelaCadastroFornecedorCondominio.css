@@ -1,0 +1,196 @@
+ 
+/* body:Define o fundo com um gradiente suave e aplica uma fonte moderna, removendo margens e preenchimentos padrão.*/
+body {
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);/* Cria um gradiente suave de azul claro para azul mais escuro */      
+    font-family: 'Segoe UI', Arial, sans-serif; /* Define a fonte do corpo como Segoe UI, com fallback para Arial e sans-serif */
+    min-height: 100vh;  /* Garante que o corpo ocupe pelo menos a altura total da janela de visualização */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    flex-direction: column; /* Organiza os itens em coluna */
+    background-color: #f0f4f8; /* Define uma cor de fundo clara para o corpo */
+    color: #334155; /* Define a cor do texto como um tom escuro de cinza */
+    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+    line-height: 1.6; /* Define o espaçamento entre linhas como 1.6 */
+    margin: 0; /* Remove as margens padrão do corpo */  
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir bordas e preench */
+}
+
+/* form:Centraliza o formulário na tela, define largura máxima, bordas arredondadas, 
+sombra e espaçamento interno para melhor aparência. */
+form {
+    max-width: 580px;   /* Define a largura máxima do formulário para 580 pixels */
+    width: 100%; /* Permite que o formulário ocupe toda a largura disponível até o máximo de 580 pixels */       
+    margin: 40px auto;  /* Centraliza o formulário horizontalmente com margem automática */
+    padding: 32px 28px 24px 28px;   /* Adiciona preenchimento interno de 32 pixels no topo, 28 pixels nas laterais e 24 pixels na parte inferior */
+    border-radius: 18px;    /* Arredonda os cantos do formulário com um raio de 18 pixels */
+    background: #fff;   /* Define o fundo do formulário como branco */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);   /* Adiciona uma sombra suave ao formulário para dar profundidade */
+    border: none;   /* Remove a borda padrão do formulário */
+    position: relative; /* Define a posição do formulário como relativa para permitir posicionamento absoluto de elementos internos */
+    transition: box-shadow 0.3s;    /* Adiciona uma transição suave para a sombra ao passar o mouse */
+}
+/* form:hover:Adiciona uma sombra mais intensa ao passar o mouse, destacando o formulário. */
+form:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);  /* Intensifica a sombra ao passar o mouse para destacar o formulário */
+}
+/* h2:Define o estilo do título do formulário, centralizando e aplicando margens, cor e espaçamento. 
+Centraliza o título, ajusta cor, espaçamento e peso da fonte para dar destaque.*/
+h2 {
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 28px;    /* Adiciona uma margem inferior de 28 pixels para espaçamento */
+    color: #2d3a4b; /* Define a cor do texto do título como um tom escuro de azul */
+    font-weight: 600;   /* Define o peso da fonte do título como 600 (negrito) */
+    letter-spacing: 1px;    /* Adiciona espaçamento entre as letras do título */
+    font-size: 1.5em; /* Define o tamanho da fonte do título como 1.5 vezes o tamanho base */
+    margin-top: 0; /* Remove a margem superior do título para alinhamento adequado */
+}
+/* label:Define o estilo dos rótulos dos campos, incluindo cor, tamanho da fonte e espaçamento. 
+Exibe os rótulos acima dos campos, com espaçamento, cor e peso para melhor legibilidade.*/
+label {
+    display: block; /* Exibe o rótulo como um bloco, ocupando toda a largura disponível */
+    margin-top: 18px; /* Adiciona uma margem superior de 18 pixels para espaçamento */
+    color: #2d3a4b; /* Define a cor do texto do rótulo como um tom escuro de azul */
+    font-size: 1.04em; /* Define o tamanho da fonte do rótulo como 1.04 vezes o tamanho base */
+    font-weight: 500; /* Define o peso da fonte do rótulo como 500 (seminegrito) */
+    letter-spacing: 0.2px; /* Adiciona espaçamento entre as letras do rótulo */
+}
+/* input, select:Define o estilo dos campos de entrada e seleção, incluindo preenchimento, borda,
+cor de fundo e transições.
+input[type="text"], input[type="date"], select:
+Estiliza campos de texto, data e seleção para ocupar toda a largura, com bordas suaves e fundo claro. */
+input[type="text"],  
+input[type="email"],  
+input[type="url"],  
+input[type="number"],  
+input[type="date"],
+select {
+    width: 100%;    /* Faz os campos ocuparem toda a largura disponível */  
+    padding: 10px 12px; /* Adiciona preenchimento interno de 10 pixels na parte superior e inferior, e 12 pixels nas laterais */
+    margin-top: 7px;    /* Adiciona uma margem superior de 7 pixels para espaçamento */
+    border: 1.5px solid #dbeafe;    /* Define uma borda sólida de 1.5 pixels com cor azul clara */
+    border-radius: 7px; /* Arredonda os cantos dos campos com um raio de 7 pixels */
+    background: #f6faff; /* Define o fundo dos campos como um azul muito claro */
+    font-size: 1em; /* Define o tamanho da fonte dos campos como 1 vez o tamanho base */
+    color: #2d3a4b; /* Define a cor do texto dos campos como um tom escuro de azul */
+    transition: border 0.2s, box-shadow 0.2s;   /* Adiciona uma transição suave para a borda e sombra ao interagir */
+    outline: none;  /* Remove o contorno padrão ao focar no campo */
+}
+/* input[type="text"]:focus, input[type="date"]:focus, select:focus:
+Aplica um estilo de foco aos campos de entrada e seleção, destacando-os com uma borda azul e sombra suave. 
+Destaca o campo ativo com borda azul e leve sombra, melhorando a experiência do usuário.*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border: 1.5px solid #60a5fa;    /* Destaca a borda com uma cor azul mais intensa */
+    box-shadow: 0 0 0 2px #bae6fd;  /* Adiciona uma sombra azul clara ao redor do campo */
+    background: #fff;                /* Altera o fundo para branco */
+    width: 100%;    /* Garante que o campo ainda ocupe toda a largura disponível */
+    margin-top: 28px;   /* Aumenta o espaçamento superior ao focar para destacar o campo */
+    padding: 12px 0;    /* Ajusta o preenchimento interno ao focar para manter a consistência visual */
+}
+/* .inline:Define o estilo dos botões de opção e caixas de seleção, tornando-os inline com margens e cor de destaque.
+Exibe botões de opção e caixas de seleção em linha, com margens e cor de destaque para fácil interação. 
+Permite exibir elementos (como radio/checkbox) na mesma linha, com cor de destaque e cursor pointer.*/
+input[type="radio"],    
+.inline {
+    width: auto !important; /* Garante que os botões de opção e caixas de seleção não ocupem toda a largura, permitindo que se ajustem ao conteúdo */
+    display: inline-block;      /* Exibe os botões de opção e caixas de seleção como blocos em linha, permitindo que fiquem lado a lado */
+    margin-right: 8px;      /* Adiciona uma margem à direita de 8 pixels para espaçamento entre os botões */
+    vertical-align: middle; /* Alinha verticalmente os botões de opção e caixas de seleção ao meio do texto adjacente */
+    accent-color: #2563eb;  /* Define a cor de destaque dos botões de opção e caixas de seleção como um azul intenso */
+    cursor: pointer;    /* Muda o cursor para pointer ao passar sobre os botões, indicando que são interativos */
+}
+/* Organiza grupos de radio buttons ou checkboxes em linhas flexíveis, com espaçamento entre eles.*/
+.radio-group,
+.checkbox-group {
+    margin-top: 7px;    /* Adiciona uma margem superior de 7 pixels para espaçamento */
+    margin-bottom: 2px; /* Adiciona uma margem inferior de 2 pixels para espaçamento */
+    display: flex;  /* Ativa o Flexbox, um modelo de layout CSS que facilita o alinhamento e distribuição de espaço entre itens em um container, permitindo organizar os elementos filhos em linha (horizontal) ou coluna (vertical) de forma flexível e responsiva */
+    flex-wrap: wrap;    /* Permite que os itens dentro do grupo se movam para a próxima linha se não houver espaço suficiente na linha atual, garantindo que todos os itens sejam visíveis e bem distribuídos */
+    gap: 12px 18px; /* Define um espaçamento uniforme de 12 pixels entre os itens na direção principal (horizontal) e 18 pixels na direção transversal (vertical), melhorando a legibilidade e a estética do layout */
+}
+/* Ajusta o estilo dos rótulos desses grupos para melhor visualização e interação. */
+.checkbox-group label,
+.radio-group label {
+    margin-top: 0;  /* Remove a margem superior dos rótulos para alinhamento adequado */
+    font-weight: 400;   /* Define o peso da fonte dos rótulos como normal (400) para uma aparência mais leve */
+    color: #334155; /* Define a cor do texto dos rótulos como um tom escuro de cinza */
+    font-size: 0.98em;  /* Define o tamanho da fonte dos rótulos como 0.98 vezes o tamanho base, ligeiramente menor que o padrão */
+    cursor: pointer;    /* Muda o cursor para pointer ao passar sobre os rótulos, indicando que são interativos */
+}
+/* Define o estilo das mensagens de erro, usando cor vermelha e tamanho menor para chamar atenção sem poluir o layout.*/
+.error {
+    color: #ef4444; /* Define a cor do texto de erro como vermelho intenso para chamar atenção */
+    font-size: 0.93em;  /* Define o tamanho da fonte das mensagens de erro como 0.93 vezes o tamanho base, tornando-as um pouco menores que o texto normal */
+    margin-top: 4px;    /* Adiciona uma margem superior de 4 pixels para espaçamento */
+    min-height: 18px;   /* Define uma altura mínima de 18 pixels para garantir que haja espaço suficiente para a mensagem de erro, mesmo que esteja vazia */
+    font-weight: 500;   /* Define o peso da fonte das mensagens de erro como seminegrito (500) para destacá-las, mas sem exagerar */
+    letter-spacing: 0.1px;  /* Adiciona um leve espaçamento entre as letras das mensagens de erro para melhorar a legibilidade */
+}
+/* Estiliza o botão de envio com gradiente azul, bordas arredondadas, sombra e efeito de transição ao interagir.*/
+button[type="submit"] {
+    width: 100%;    /* Faz o botão ocupar toda a largura disponível do formulário */
+    margin-top: 28px;       /* Adiciona uma margem superior de 28 pixels para espaçamento */
+    padding: 12px 0;    /* Adiciona preenchimento interno de 12 pixels na parte superior e inferior, e 0 pixels nas laterais */
+    background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);   /* Cria um gradiente azul do escuro para o claro */
+    color: #fff;    /* Define a cor do texto do botão como branco */
+    border: none;   /* Remove a borda padrão do botão */
+    border-radius: 7px; /* Arredonda os cantos do botão com um raio de 7 pixels */
+    font-size: 1.08em;  /* Define o tamanho da fonte do botão como 1.08 vezes o tamanho base */
+    font-weight: 600;   /* Define o peso da fonte do botão como 600 (negrito) para destacá-lo */
+    letter-spacing: 0.5px;  /* Adiciona espaçamento entre as letras do texto do botão para melhorar a legibilidade */
+    cursor: pointer;    /* Muda o cursor para pointer ao passar sobre o botão, indicando que é interativo */
+    /*
+        box-shadow: 0 2px 8px 0 rgba(37,99,235,0.08);
+        Esta propriedade CSS adiciona uma sombra ao elemento, criando um efeito de profundidade.
+        - O primeiro valor (0) define o deslocamento horizontal da sombra.
+        - O segundo valor (2px) define o deslocamento vertical da sombra.
+        - O terceiro valor (8px) define o desfoque da sombra.
+        - O quarto valor (0) define a propagação da sombra.
+        - O último valor (rgba(37,99,235,0.08)) define a cor da sombra com transparência.
+    */
+    box-shadow: 0 2px 8px 0 rgba(37,99,235,0.08);   /* Adiciona uma sombra suave ao botão para dar profundidade */
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;   /* Adiciona uma transição suave para o fundo, sombra e transformação ao interagir com o botão */
+}
+/* Estiliza a tag <p> para melhor legibilidade e integração visual com o formulário */
+main p,
+form p {
+    margin-top: 14px;   /* Adiciona uma margem superior de 14 pixels para espaçamento */
+    margin-bottom: 14px;    /* Adiciona uma margem inferior de 14 pixels para espaçamento */
+    color: #4b5563; /* Define a cor do texto como um tom escuro de cinza */
+    font-size: 1em; /* Define o tamanho da fonte como 1 vez o tamanho base */
+    line-height: 1.5; /* Define o espaçamento entre linhas como 1.5 para melhorar a legibilidade */
+    letter-spacing: 0.1px; /* Adiciona um leve espaçamento entre as letras para melhorar a legibilidade */
+    text-align: center; /* Centraliza o texto para melhor apresentação */
+}
+/* Altera o gradiente e aumenta a sombra ao passar o mouse ou focar, dando feedback visual ao usuário.*/
+button[type="submit"]:hover, button[type="submit"]:focus {
+    background: linear-gradient(90deg, #1d4ed8 0%, #38bdf8 100%);   /* Escurece o gradiente ao passar o mouse ou focar */
+    box-shadow: 0 4px 16px 0 rgba(37,99,235,0.13);  /* Intensifica a sombra ao passar o mouse ou focar para destacar o botão */
+    transform: translateY(-2px) scale(1.01);    /* Move o botão ligeiramente para cima e aumenta seu tamanho ao passar o mouse ou focar, criando um efeito de elevação */
+}
+/* Torna o formulário responsivo, ajustando espaçamentos e tamanhos de fonte para telas menores - Celular.*/
+@media (max-width: 600px) {
+    form {
+        padding: 18px 8px 16px 8px; /* Reduz o preenchimento interno do formulário para telas menores */
+        max-width: 98vw;    /* Permite que o formulário ocupe quase toda a largura da tela em dispositivos móveis */
+    }
+    h2 {
+        font-size: 1.2em;   /* Reduz o tamanho da fonte do título para telas menores */
+    }
+    button[type="submit"] {
+        font-size: 1em; /* Reduz o tamanho da fonte do botão para telas menores */
+    }
+    .input[type="text"],
+    .input[type="date"],
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 8px 0;
+    }
+
+} 
