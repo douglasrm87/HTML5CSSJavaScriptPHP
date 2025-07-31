@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de CSS3 com Selectors</title>
+  <style>
+    /* Element Selector - Aplica a todos os <p> */
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* ID Selector - Aplica ao elemento com id="header" */
+    #header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Class Selector - Aplica a qualquer elemento com class="intro" */
+    .intro {
+      background-color: #f0f8ff;
+      border-left: 4px solid #004080;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">Cabeçalho do Site</div>
+
+  <p class="intro">Este é um parágrafo introdutório com estilo aplicado pela classe "intro".</p>
+
+  <p>Este é outro parágrafo comum, que usa apenas o seletor de elemento &lt;p&gt;.</p>
+
+</body>
+</html>

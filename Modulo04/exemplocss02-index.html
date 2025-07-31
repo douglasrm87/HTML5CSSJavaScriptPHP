@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Seletores Avançados CSS3</title>
+  <link rel="stylesheet" href="exemplocss02-style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="descendant">
+      <p>Este parágrafo é um <strong>descendente</strong> de .descendant.</p>
+    </div>
+
+    <div class="child">
+      <p>Este parágrafo é um <strong>filho direto</strong> de .child.</p>
+      <div>
+        <p>Este parágrafo <strong>não</strong> é filho direto de .child (é neto).</p>
+      </div>
+    </div>
+
+    <div class="sibling">
+      <h2>Título de Seção</h2>
+      <p class="adjacent">Este parágrafo vem <strong>imediatamente</strong> após o &lt;h2&gt; (Adjacent Sibling).</p>
+      <p class="general">Este parágrafo é <strong>irmão geral</strong> do &lt;h2&gt; (General Sibling).</p>
+      <p class="general">Outro irmão geral do &lt;h2&gt;.</p>
+    </div>
+  </div>
+
+</body>
+</html>

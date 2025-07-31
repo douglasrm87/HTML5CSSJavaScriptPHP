@@ -1,0 +1,35 @@
+/* :first-child - estiliza apenas o primeiro <li> */
+li:first-child {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+/* :hover - estiliza quando o mouse passa sobre o link */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* :focus - estiliza o input quando está em foco */
+input:focus {
+  border: 2px solid blue;
+  outline: none;
+  background-color: #eef;
+}
+
+/* ::before e ::after - adicionam conteúdo decorativo */
+.decorado::before {
+  content: "★★★★★ ";
+  color: rgb(238, 31, 152);
+}
+.decorado::after {
+  content: " ✦✦✦✦✦";
+  color: gold;
+}
+
+/* ::first-line - estiliza apenas a primeira linha do parágrafo */
+.decorado::first-line {
+  font-variant: small-caps;
+  font-weight: bold;
+  color: rgb(10, 243, 10);
+}

@@ -1,0 +1,28 @@
+/* Descendant Selector - estiliza qualquer <p> dentro de .descendant */
+.descendant p {
+  color: darkblue;
+  background-color: #e6f0ff;
+  padding: 8px;
+}
+
+/* Child Selector - estiliza apenas <p> que são filhos diretos de .child */
+.child > p {
+  color: darkgreen;
+  background-color: #eaffea;
+  padding: 8px;
+}
+
+/* Adjacent Sibling Selector - estiliza <p> imediatamente após <h2> */
+h2 + p {
+  color: darkred;
+  background-color: #ffe6e6;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* General Sibling Selector - estiliza todos os <p> irmãos de <h2> */
+h2 ~ p {
+  border-left: 4px solid gray;
+  margin-top: 5px;
+  padding: 8px;
+}

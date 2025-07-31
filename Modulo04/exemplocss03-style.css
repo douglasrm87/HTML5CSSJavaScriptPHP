@@ -1,0 +1,25 @@
+/* [attribute] - Seleciona qualquer elemento que tenha o atributo 'title' */
+[title] {
+  color: darkorange;
+  font-weight: bold;
+  border-bottom: 1px dashed orange;
+}
+
+/* [attribute=value] - Seleciona links que abrem em nova aba (target="_blank") */
+a[target="_blank"] {
+  color: darkred;
+  text-decoration: underline;
+}
+
+/* [attribute=value] - Estiliza o input do tipo 'email' */
+input[type="email"] {
+  background-color: #f0f8ff;
+  border: 2px solid #003366;
+  padding: 5px;
+}
+
+/* [attribute] - Aplica a qualquer input com o atributo 'placeholder' */
+input[placeholder] {
+  font-style: italic;
+  border-radius: 5px;
+}
